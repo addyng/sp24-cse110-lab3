@@ -1,4 +1,6 @@
 /* External CSS */
+/* Import from Google: Mulish and Montserrats */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* Universal Selector, CSS Variables & Fallbacks & rgb, rgba*/
 :root {
@@ -70,7 +72,7 @@ form {
 
 /* Auto margins & short padding*/
 fieldset {
-    width: 48em;
+    width: 48vw;
     margin: auto;
     padding: 2em;
 }
@@ -209,6 +211,11 @@ video {
     min-width: 16rem;
     width: 32em;
     height: auto;
+    margin: 4px;
+}
+
+audio {
+    margin: 4px;
 }
 
 /* Relative position */
@@ -236,4 +243,68 @@ video {
     width: 80%;
     height: 75%;
     border: 2px solid brown
+}
+
+/* iPhone 12 Pro/ iPhone 14 Pro Max */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    #badmintonemoji {
+        height: 7vh;
+        width: auto;
+        position: fixed;
+        top: 9vh;
+        left: 82vw;
+    }
+    video {
+        max-width: 72vw;
+        min-width: 16vw;
+        width: 64vw;
+        height: auto;
+        margin: 4px;
+    }
+
+    /* background-color, border styling, Long margins*/
+    form * {
+        margin: none;
+        padding: none;
+    }
+
+    form {
+        background-color: #b4dbff;
+        border-style: solid;
+        border-color: red;
+        border-width: 0.2em;
+        border-radius: 8px;
+        margin: none;
+        padding: none;
+        width: 85%;
+    }
+
+    /* Auto margins & short padding*/
+    fieldset {
+        width: 80%;
+        margin: none;
+        padding: none;
+    }
+
+    #handshake {
+        position: relative;
+        left: 4em;
+        width: 70%;
+    }
+}
+
+/* iPad Pro */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #badmintonemoji {
+        height: 9vh;
+        width: auto;
+        position: fixed;
+        top: 15vh;
+        left: 85vw;
+    }
+}
+
+/* Fonts, 3rd Party font from Google: Mulish and Montserrats */
+* {
+    font-family: "Mulish", "Montserrats", sans-serif, Arial, Helvetica;
 }
