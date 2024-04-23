@@ -52,11 +52,11 @@ p {
 
 /* wider-gamut color */
 #whentournament {
-    color: color(srgb 0.3 0.7 1 / .8);
+    color: color(display-p3 0.3 0.7 1 / .8);
 }
 
 #clubfees {
-    color: color-mix(in lch, #1c08d1 83%, rgb(52, 34, 155) 41%);
+    color: color-mix(in srgb, #1c08d1 83%, rgb(52, 34, 155) 41%);
 }
 
 /* background-color, border styling, Long margins*/
@@ -166,7 +166,7 @@ h2:has(+ h3) {
 /* Nesting Selector */
 ul {
     list-style-type: square;
-    li {
+    & li {
         font-size: 1.3em;
         text-decoration: underline;
     }
