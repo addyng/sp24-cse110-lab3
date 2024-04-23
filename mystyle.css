@@ -293,7 +293,7 @@ audio {
     }
 }
 
-/* iPad Pro */
+/* iPad Air & iPad Pro */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #badmintonemoji {
         height: 9vh;
