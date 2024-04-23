@@ -1,4 +1,57 @@
-/* comment */
+/* External CSS */
+
+/* Universal Selector, CSS Variables & Fallbacks & rgb, rgba*/
+:root {
+    --main-color: rgb(30, 1, 175);
+    --secondary-color: rgba(72, 47, 233, 0.9);
+}
+
 * {
-    color: red;
+    color: var(--main-color, var(--secondary-color, blue));
+}
+
+/* Element Selector & hsl */
+p {
+    color: hsl(232, 95%, 36%);
+}
+
+/* h2, Class Selector & Hex code, text color */
+.topic {
+    color: #1a0777;
+}
+
+#newbusinessAddy {
+    color: #02f;
+}
+
+/* ID Selector & color name */
+#memberslist {
+    color: blue;
+}
+
+/* hsla */
+#whofundraise {
+    color: hsla(235, 73%, 45%, 0.6);
+}
+
+/* wider-gamut color */
+#whentournament {
+    color: color(display-p3 0.3 0.7 1 / .8);
+}
+
+#clubfees {
+    color: color-mix(in srgb, #1c08d1 83%, rgb(52, 34, 155) 41%);
+}
+
+/* background-color, border styling*/
+form {
+    background-color: #b4dbff;
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+    border-radius: 8px;
+}
+
+body {
+    background-color: rgb(255, 225, 250);
 }
