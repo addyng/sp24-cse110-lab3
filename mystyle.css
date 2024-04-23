@@ -1,6 +1,6 @@
 /* External CSS */
 /* Import from Google: Mulish and Montserrats */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* Universal Selector, CSS Variables & Fallbacks & rgb, rgba*/
 :root {
@@ -8,8 +8,10 @@
     --secondary-color: rgba(72, 47, 233, 0.9);
 }
 
+/* Fonts, 3rd Party font from Google: Mulish and Montserrats */
 * {
     color: var(--main-color, var(--secondary-color, blue));
+    font-family: "Mulish", "Montserrats", sans-serif, Arial, Helvetica;
 }
 
 /* Element Selector & hsl */
@@ -50,11 +52,11 @@ p {
 
 /* wider-gamut color */
 #whentournament {
-    color: color(display-p3 0.3 0.7 1 / .8);
+    color: color(srgb 0.3 0.7 1 / .8);
 }
 
 #clubfees {
-    color: color-mix(in srgb, #1c08d1 83%, rgb(52, 34, 155) 41%);
+    color: color-mix(in lch, #1c08d1 83%, rgb(52, 34, 155) 41%);
 }
 
 /* background-color, border styling, Long margins*/
@@ -94,6 +96,7 @@ form label {
 header > h1 {
     text-align: center;
     font-size: 3pc;
+    font-family: "Jersey 25", "Mulish", "Montserrats", sans-serif, Arial, Helvetica;
 }
 
 /* General sibling combinator */
@@ -163,9 +166,12 @@ h2:has(+ h3) {
 /* Nesting Selector */
 ul {
     list-style-type: square;
-    & li {
+    li {
         font-size: 1.3em;
         text-decoration: underline;
+    }
+    li:hover {
+        font-size: 2em;
     }
 }
 
@@ -234,7 +240,6 @@ audio {
         "img img";
     grid-gap: 4px;
     max-width: 48vw;
-    max-height: auto;
     justify-items: center;
     align-items: center;
 }
@@ -264,8 +269,8 @@ audio {
 
     /* background-color, border styling, Long margins*/
     form * {
-        margin: none;
-        padding: none;
+        margin: 0;
+        padding: 0;
     }
 
     form {
@@ -274,16 +279,16 @@ audio {
         border-color: red;
         border-width: 0.2em;
         border-radius: 8px;
-        margin: none;
-        padding: none;
+        margin: 0;
+        padding: 0;
         width: 85%;
     }
 
     /* Auto margins & short padding*/
     fieldset {
-        width: 80%;
-        margin: none;
-        padding: none;
+        width: 77%;
+        margin: 0;
+        padding: 0;
     }
 
     #handshake {
@@ -302,9 +307,4 @@ audio {
         top: 15vh;
         left: 85vw;
     }
-}
-
-/* Fonts, 3rd Party font from Google: Mulish and Montserrats */
-* {
-    font-family: "Mulish", "Montserrats", sans-serif, Arial, Helvetica;
 }
